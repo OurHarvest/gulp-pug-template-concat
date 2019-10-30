@@ -25,7 +25,7 @@ module.exports = function pugConcat(fileName, _opts) {
     }
 
     // isolate filename from full path
-    var filename = file.path.replace(file.base, '').replace('.js', '');
+    var filename = file.path.replace(file.base, '').replace('.js', '').slice(1);
 
     // split pug helpers and a template function and replace template name with filename
     var splittedTemplate = file.contents.toString().split('function template');
